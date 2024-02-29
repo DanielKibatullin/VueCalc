@@ -6,12 +6,9 @@ createApp({
         };
     },
     computed: {
-        },
     },
     watch:  {
-        },
     },
     methods: {
     },
-}
 }).mount('#app')
