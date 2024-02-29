@@ -10,5 +10,8 @@ createApp({
     watch:  {
     },
     methods: {
+        h(){
+            console.log("hi");
+        },
     },
 }).mount('#app')
