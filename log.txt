@@ -1,0 +1,2 @@
+2/29 - Daniel & Kanjuda : Began setting up (buttons for calculator) had issue with 
+3/1 - Kanjuda : fixed button position
