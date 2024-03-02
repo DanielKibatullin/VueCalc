@@ -14,4 +14,4 @@ createApp({
             console.log("hi");
         },
     },
-}).mount('#app')
+}).mount('#app');
