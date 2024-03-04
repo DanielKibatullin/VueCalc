@@ -8,13 +8,13 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" id="my_value" class = "inpt"/> 
+    <input type="text" id="my_value" class = "inpt" v-model = "equation"/> 
     <br>
 <button type="button" class = "button" v-on:click="del">DEL</button> 
-<button type="button" class = "button" v-on:click="lpar">&lpar;</button> 
-<button type="button" class="button" v-on:click="rpar">&rpar;</button>
+<button type="button" class = "button" v-on:click="operator('(')">&lpar;</button> 
+<button type="button" class="button" v-on:click="operator(')')">&rpar;</button>
 <button type="button" class="button" v-on:click="mod">mod</button>
-<button type="button" class="button" v-on:click="pi">&Pi;</button>
+<button type="button" class="button" v-on:click="pie">&Pi;</button>
 <br>
 <button type="button" class="button" v-on:click="num(7)">7</button>
 <button type="button" class="button" v-on:click="num(8)">8</button>
@@ -26,7 +26,7 @@
 <button type="button" class="button" v-on:click="num(5)">5</button>
 <button type="button" class="button" v-on:click="num(6)">6</button>
 <button type="button" class="button" v-on:click="operator('*')">*</button>
-<button type="button" class="button" v-on:click="pow2">x^2</button>
+<button type="button" class="button" v-on:click="pow2">x&sup2;</button>
 <br>
 <button type="button" class="button" v-on:click="num(1)">1</button>
 <button type="button" class="button" v-on:click="num(2)">2</button>
@@ -35,10 +35,10 @@
 
 <br>
 <button type="button" class="button" v-on:click="num(0)">0</button>
-<button type="button" class="button" v-on:click="dot">.</button>
-<button type="button" class="button" v-on:click="percent">%</button>
+<button type="button" class="button" v-on:click="operator('.')">.</button>
+<button type="button" class="button" v-on:click="operator('%')">%</button>
 <button type="button" class="button" v-on:click="operator('+')">+</button>
-<button type="button" class = "ebutton" v-on:click="equal">=</button>
+<button type="button" class = "ebutton" v-on:click="compute">=</button>
 
 </div>
 </body>
