@@ -10,7 +10,7 @@ createApp({
     watch:  {
     },
     methods: {
-        h(){
+        del(){
             console.log("hi");
         },
     },
