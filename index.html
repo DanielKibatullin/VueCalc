@@ -8,7 +8,10 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" id="my_value" class = "inpt" v-model = "equation"/> 
+    <input type="text" pattern = "[0-9]" id="my_value" class = "inpt" v-model = "equation" style  = "width:350px;"/> 
+    =
+    <input type="text" id="my_value" class = "inpt" v-model = "answer" style  = "width:80px;display:inline;" readonly/> 
+
     <br>
 <button type="button" class = "button" v-on:click="del">DEL</button> 
 <button type="button" class = "button" v-on:click="operator('(')">&lpar;</button> 
