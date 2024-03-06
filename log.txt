@@ -2,3 +2,5 @@
 3/1 - Kanjuda : fixed button position
 3/4 - Daniel & Kanjuda : Setup all the methods for the buttons on the calculator. Made the input text box work with all the buttons. Started on the compute button. 
 3/5 - Kanjuda : CSS, made it look better
+3/5 - Daniel & Kanjuda : worked on the compute button. realized eval sucks. got interrupted by a fire or smthin
+3/6 - Daniel & Kanjuda : 
