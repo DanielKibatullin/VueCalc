@@ -1,6 +1,7 @@
 .button {
     background-color:lightblue;
     border: none;
+    border-radius: 5px;
     color:rgb(75, 135, 246);
     padding: 15px 32px;
     text-align: center;
@@ -9,11 +10,12 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position: relative; left: 5px;
+    position: relative; left: 10px;
 }
 .ebutton {
     background-color:lightblue;
     border: none;
+    border-radius: 5px;
     color:rgb(75, 135, 246);
     padding: 15px 32px;
     height: 105px;
@@ -25,33 +27,35 @@
     cursor: pointer;
     position: relative;
     bottom: 30px; 
-    position: relative; left: 5px;
+    position: relative; left: 10px;
 }
 
 .inpt{
     width: 450px;
-    padding: 12px 20px;
+    padding: 12px 15px;
     margin: 8px 0;
     display: inline-block;
     border: 4px solid;
     border-color:palegreen;
     border-width: 2px;
     box-sizing: border-box;
-    position: relative; left: 5px;
+    position: relative; left: 10px;
 }
 
 
 body{
     background-color:mistyrose;
     border: 4px solid #ccc;
-    width:460px;
+    border-radius: 5px;
+    width:480px;
+    font-size:20px;
 }
 
 .button:hover {
     background-color:rgb(72, 196, 237);
-    transition: 0.7s;
+    transition: 0.5s;
 }
 .ebutton:hover {
     background-color:palegreen;
-    transition: 0.7s;
+    transition: 0.5s;
 }
