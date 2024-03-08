@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<title>Vue Calculator</title>
-</head>
-<body>
-<div id="app">
-    <input type="text" pattern = "[0-9]" id="my_value" class = "inpt" v-model = "equation" style  = "width:350px;"/> 
-    &nbsp;=
-    <input type="text" id="my_value" class = "inpt" v-model = "answer" style  = "width:80px;display:inline;" readonly/> 
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Vue Calculator</title>
+	</head>
+	<body>
+		<div id="app" class="container">
+			<div v-if="recentEquations.length > 0">
+				<div class="recent-equation" v-for="(equation, index) in recentEquations" :key="index">
+					<input type="text" class="recent-input" :value="equation" @click="setEquationFromHistory(index)" readonly />
+					<span class="equal">=</span>
+					<input
+						type="text"
+						class="recent-input"
+						:value="recentAnswers[index]"
+						@click="setEquationFromHistoryy(index)"
+						readonly
+					/>
+				</div>
+			</div>
+			<input type="text" pattern="[0-9]" id="my_value" class="inpt" v-model="equation" style="width: 350px" />
 
-    <br>
-<button type="button" class = "button" v-on:click="del">DEL</button> 
-<button type="button" class = "button" v-on:click="operator('(')">&lpar;</button> 
-<button type="button" class="button" v-on:click="operator(')')">&rpar;</button>
-<button type="button" class="button" v-on:click="mod">mod</button>
-<button type="button" class="button" v-on:click="pie">&Pi;</button>
-<br>
-<button type="button" class="button" v-on:click="num(7)">7</button>
-<button type="button" class="button" v-on:click="num(8)">8</button>
-<button type="button" class="button" v-on:click="num(9)">9</button>
-<button type="button" class="button" v-on:click="operator('/')">/</button>
-<button type="button" class="button" v-on:click="sqrt">&radic;&nbsp;</button>
-<br>
-<button type="button" class="button" v-on:click="num(4)">4</button>
-<button type="button" class="button" v-on:click="num(5)">5</button>
-<button type="button" class="button" v-on:click="num(6)">6</button>
-<button type="button" class="button" v-on:click="operator('*')">*</button>
-<button type="button" class="button" v-on:click="pow2">x&sup2;</button>
-<br>
-<button type="button" class="button" v-on:click="num(1)">1</button>
-<button type="button" class="button" v-on:click="num(2)">2</button>
-<button type="button" class="button" v-on:click="num(3)">3</button>
-<button type="button" class="button" v-on:click="operator('-')">-</button>
+			<br />
+			<button type="button" class="button" v-on:click="del">DEL</button>
+			<button type="button" class="button" v-on:click="operator('(')">&lpar;</button>
+			<button type="button" class="button" v-on:click="operator(')')">&rpar;</button>
+			<button type="button" class="button" v-on:click="mod">mod</button>
+			<button type="button" class="button" v-on:click="pie">&Pi;</button>
+			<br />
+			<button type="button" class="button" v-on:click="num(7)">7</button>
+			<button type="button" class="button" v-on:click="num(8)">8</button>
+			<button type="button" class="button" v-on:click="num(9)">9</button>
+			<button type="button" class="button" v-on:click="operator('/')">/</button>
+			<button type="button" class="button" v-on:click="sqrt">&radic;&nbsp;</button>
+			<br />
+			<button type="button" class="button" v-on:click="num(4)">4</button>
+			<button type="button" class="button" v-on:click="num(5)">5</button>
+			<button type="button" class="button" v-on:click="num(6)">6</button>
+			<button type="button" class="button" v-on:click="operator('*')">*</button>
+			<button type="button" class="button" v-on:click="pow2">x&sup2;</button>
+			<br />
+			<button type="button" class="button" v-on:click="num(1)">1</button>
+			<button type="button" class="button" v-on:click="num(2)">2</button>
+			<button type="button" class="button" v-on:click="num(3)">3</button>
+			<button type="button" class="button" v-on:click="operator('-')">-</button>
 
-<br>
-<button type="button" class="button" v-on:click="num(0)">0</button>
-<button type="button" class="button" v-on:click="operator('.')">.</button>
-<button type="button" class="button" v-on:click="operator('%')">%</button>
-<button type="button" class="button" v-on:click="operator('+')">+</button>
-<button type="button" class = "ebutton" v-on:click="compute">=</button>
-
-</div>
-</body>
-<script type="module" src="index.js"></script>
+			<br />
+			<button type="button" class="button" v-on:click="num(0)">0</button>
+			<button type="button" class="button" v-on:click="operator('.')">.</button>
+			<button type="button" class="button" v-on:click="operator('%')">%</button>
+			<button type="button" class="button" v-on:click="operator('+')">+</button>
+			<button type="button" class="ebutton" v-on:click="compute">=</button>
+		</div>
+	</body>
+	<script type="module" src="index.js"></script>
 </html>
